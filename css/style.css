@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+@font-face {
+    font-family: Ubuntu;
+    src: url("../fonts/Ubuntu-Regular.ttf");
+}
+@font-face {
+    font-family: Ubuntu;
+    src: url("../fonts/Ubuntu-Bold.ttf");
+    font-weight: bold;
+}
+html, body {
+    font-family: Ubuntu, sans-serif;    
+}
+
+
+
+/* header = меню */
+.header {
+    position: fixed; top: 0; width: 100%;    
+    /* прибивает к верху */
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 8px 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+}
+.logo img {
+    vertical-align: bottom;  /* новое: вертикальное выравние по нижнему краю? */
+    max-height: 70px;
+}
+.menu {
+    /* margin: 0 auto; */
+    display: flex;
+    align-items: center;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+.menu-item {
+    margin-left: 40px;
+}
+.menu-item a {
+    font-size: 18px;
+    color: #030305;
+    text-decoration: none;
+}
+.menu-item a:hover{
+    border-bottom: 2px solid black;
+}
+
+/* 1 block = первый экран */
+.main {
+    flex: 1 1 auto;
+    background-image: url("../image/fon.jpg");
+    background-position: center;
+    background-size: cover; /* непонятная штука */
+    padding: 80px 0 100px 0;
+}
+.main-info {
+    max-width: 855px;
+}
+.main-title {
+    font-weight: bold;
+    font-size: 76px;
+    line-height: 110%;
+    color: #030305;
+    margin-bottom: 40px;
+}
+.main-text, .intro-text {
+    font-size: 20px;
+    line-height: 120%;
+    color: #030305;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.button {
+    padding: 20px;
+    width: 334px;
+    height: 64px;
+    background: #030305;
+    border: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: background-color .5s;    /* добавляет плавную смену цвета при наведении */
+}
+.button:hover {
+    cursor: pointer;
+    background: #575757;
+
+}
+
+
+
+
+/* 2 block = Персоны */
+.car {
+    padding: 85px 10px;
+}
+.sub-title {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+    color: #030305;
+
+}
+.car-items {
+    display: flex;    /* для расположения в строку */
+    flex-wrap: wrap;    /* для того, чтобы блоки переносились на новую строку */
+    align-items: center;
+    justify-content: space-around;
+}
+.car-item {
+    display: inline-block;
+    max-width: 384px;
+    text-align: center;
+    margin: 30px auto 20px;
+}
+.car-item-image:hover img {
+    /* transform: scale(90wh); */
+    transform: scale(2.5);
+    /* Масштабирует при наведении по оси Х */
+}
+.car-item-image {
+    
+}
+.car-item-image img {
+    max-width: 100%;
+    max-height: 200px;
+    vertical-align: bottom;
+    transition: all .3s;
+}
+.car-item-title {
+    height: 70px;
+    font-weight: bold;
+    font-size: 22px;
+    /* line-height: 110%; */
+    letter-spacing: 0.02em;
+    color: #030305;
+    padding: 10px;
+    
+}
+.car-item-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-height: 150px;
+}
+.car-item-item-point {
+    max-width: 110px;
+    margin: 0 7px 13px 7px;
+}
+.car-item-item-point img{
+    max-width: 70px;
+    height: 70px;
+    margin-bottom: 11px;
+}
+.car-item-action .button {
+    width: 100%;
+    height: 54px;
+    padding: 15px;
+}
+.car-item-item-point > div:nth-child(2) {
+    font-weight: bold;
+}
+
+/* древо рода */
+.tree {
+}
+
+.tree-box {
+    text-align: center;
+    margin-top: 20px;
+}
+.tree-box img {
+    max-width: 1200px;
+}
+.tree-img {    
+    background-color: rgb(44, 131, 87);
+}
+
+
+
+
+
+
+/* 3 block */
+.price {
+    overflow: hidden;
+    /* обрезает часть картинки, если она не помещается на экране */
+}
+.price .container {
+    position: relative; /* для смещения картинки относительно контейнера*/
+    padding-bottom: 121px;
+}
+.price .sub-title {
+    margin-bottom: 20px;
+}
+.price-text {
+    font-size: 16px;
+    line-height: 130%;
+    color: #5D5D5F;
+    margin-bottom: 60px;
+}
+.price-form {
+    max-width: 344px;
+    padding: 0;
+}
+.price-input {
+    box-sizing: border-box;
+    padding-left: 22px;
+    width: 344px;
+    height: 65px;
+    background: #FFFFFF;
+    border: 1px solid #5D5D5F;
+    font-size: 16px;
+    color: #000;     /* цвет вводимого текса */
+    outline: none;     /* убирает специальную обводку элемента браузером */
+    margin-bottom: 15px;
+}
+.price-input::placeholder {
+    color: #5D5D5F;    /* цвет подсказки */
+}
+.price .button {
+    width: 100%;
+}
+
+.price-img {
+    position: absolute;
+    bottom: 0;
+    left: 401px;
+}
+
+.footer {
+    border-top: 1px solid #E5E5E5;
+    padding: 25px 0;
+}
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rights {
+    font-size: 18px;
+    color: #030305;
+}
