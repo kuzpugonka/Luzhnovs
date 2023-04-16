@@ -73,19 +73,23 @@ html, body {
 .main-info {
     max-width: 855px;
 }
-.main-title {
+.main-title, .rods-title {
     font-weight: bold;
     font-size: 76px;
     line-height: 110%;
     color: #030305;
     margin-bottom: 40px;
 }
-.main-text, .intro-text {
+.main-text, .rods-text {
     font-size: 20px;
     line-height: 120%;
     color: #030305;
     margin-bottom: 40px;
     max-width: 550px;
+}
+
+.main-text p {
+    margin-top: 9px;
 }
 
 .button {
@@ -200,10 +204,7 @@ html, body {
 
 
 
-
-
-
-/* 3 block */
+/* 3 block НЕТ БЛОКА удалить? */
 .price {
     overflow: hidden;
     /* обрезает часть картинки, если она не помещается на экране */
@@ -250,6 +251,7 @@ html, body {
     left: 401px;
 }
 
+/*  ПОДВАЛ  */
 .footer {
     border-top: 1px solid #E5E5E5;
     padding: 25px 0;
@@ -263,4 +265,15 @@ html, body {
 .rights {
     font-size: 18px;
     color: #030305;
+}
+
+
+/* Фамильная роща */
+.rods-text ul {
+    list-style-type: none;
+    padding: 9px 0;
+}
+
+.rods-text ul ul {
+    padding-left: 50px;
 }
