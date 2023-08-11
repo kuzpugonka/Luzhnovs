@@ -21,7 +21,8 @@ html, body {
 
 /* header = меню */
 .header {
-    position: fixed; top: 0; width: 100%;    
+    position: fixed; top: 0; width: 100%;
+    z-index: 200;    
     /* прибивает к верху */
     background-color: #FFFFFF;
     border-bottom: 1px solid #E5E5E5;
@@ -35,8 +36,7 @@ html, body {
     display: flex;
     justify-content: space-between;
 }
-.logo {
-}
+
 .logo img {
     vertical-align: bottom;  /* новое: вертикальное выравние по нижнему краю? */
     max-height: 70px;
@@ -144,9 +144,7 @@ html, body {
     transform: scale(2.5);
     /* Масштабирует при наведении по оси Х */
 }
-.car-item-image {
-    
-}
+/* .car-item-image {} */
 .car-item-image img {
     max-width: 100%;
     max-height: 200px;
@@ -188,8 +186,7 @@ html, body {
 }
 
 /* древо рода */
-.tree {
-}
+/* .tree {} */
 
 .tree-box {
     text-align: center;
@@ -276,4 +273,21 @@ html, body {
 
 .rods-text ul ul {
     padding-left: 50px;
+}
+
+.razmetka {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.razmetka>li {
+    display: block;
+    width: 450px;
+    min-height: 70px;
+    padding: 5px 20px;
+}
+
+.rods-text {
+    max-width: 1200px;
 }

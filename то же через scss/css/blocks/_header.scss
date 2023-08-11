@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed; top: 0; width: 100%;
+    z-index: 200;        /* прибивает к верху */
+
+    background-color: $white;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 8px 0;
+}
+.header__logo {
+    vertical-align: bottom;  /* новое: вертикальное выравние по нижнему краю? */
+    max-height: 70px;
+}
+.menu {
+        /* margin: 0 auto; */
+        display: flex;
+        align-items: center;
+}
+.menu-item {
+    margin-left: 40px;
+
+}
